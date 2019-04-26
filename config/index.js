@@ -70,6 +70,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['taro-ui'], // airvip add 
     module: {
       postcss: {
         autoprefixer: {

@@ -5,7 +5,10 @@ import { connect } from '@tarojs/redux'
 import { add, minus, asyncAdd } from '../../actions/counter'
 
 import './index.less'
+import 'taro-ui/dist/style/index.scss' 
+
 import Head from '../../components/head/head';
+import Food from '../../components/food/food';
 
 
 @connect(({ counter }) => ({
@@ -59,6 +62,7 @@ class Index extends Component {
     return (
       <View className='index'>
         <Head/>
+        <Food/>
       </View>
     )
   }
