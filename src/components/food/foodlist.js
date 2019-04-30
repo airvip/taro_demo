@@ -7,7 +7,8 @@ class FoodList extends Component{
       this.state={};
   }
   render(){
-      let {store}=this.state;
+      // let {store}=this.state;
+      // console.log(JSON.stringify(this.props.currentList));
       return (
         <View>
             Template

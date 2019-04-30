@@ -22,14 +22,19 @@ class Cata extends Component{
 
   clickHandle(item){
     if(this.state.selectCata && this.state.selectCata.id != item.id){
-      this.setState({selectCata:item})
+      this.setState({selectCata:item},()=>{
+        this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata)
+      })
     }else if(!this.state.selectCata){
-      this.setState({selectCata:item})
+      this.setState({selectCata:item},()=>{
+        this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata)
+      })
     }
   }
 
   render(){
       let {selectCata,cata}=this.state;
+      console.log(this.state.selectCata);
       return (
         <View className="cata">{
           cata.map((item,index)=>{
